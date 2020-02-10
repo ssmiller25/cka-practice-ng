@@ -1,6 +1,19 @@
-# CKA Practice Environment
+# CKA Practice Environment Next Gen!
+
+
+Based on the origina repo [arush-sal/cka-practice-environment](https://github.com/arush-sal/cka-practice-environment) 
+and integrating modification from [satomic/cka-practice-environment](https://github.com/satomic/cka-practice-environment) 
+but with enough changes to warrent a name change (in my mind):
+
+  * Using [ttyd](https://github.com/tsl0922/ttyd) for the web terminal emulator.  Need a well maintained version.
+  * Able to easily run local or in the cloud, with no dependency on docker-compose. (using Kustomize)
+  * Map questions to the latest CKA exam ([V1.17 curriculum](https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_V1.17.pdf), released Feb 4th, 2020)
+
 
 ## the MOSTLY DIFFERENCE from the original repo
+
+
+
 thx the orginal repo [arush-sal/cka-practice-environment](https://github.com/arush-sal/cka-practice-environment) by [arush-sal](https://github.com/arush-sal), it's awesome! but hard to use it.
 - only support visit the CKA practice environment with URL `http://localhost` or `http://127.0.0.1`, that's **TOO BAD**, cause this constraint, you can **only use MacBook or CentOS/Ubuntu Desktop verison**, if you wanna use a VM on a Cloud, and visit the environment from your local browser, there is no way for you.
 - and based on my fork, you can **provision the CKA practice environment on a Cloud VM, than visit it with its PUBLIC IP from your local browser**, that's pretty cool
