@@ -3,9 +3,9 @@ version: "3"
 services:
 
   gateone:
-    build: ./gateone
+    build: ./ttyd
     ports:
-    - "8000:8000"
+    - "7681:7681"
     hostname: kubectl
     networks:
     - frontend
@@ -21,7 +21,7 @@ services:
     networks:
     - frontend
     environment:
-      GATEONE_HTTP_SERVER: "47.52.219.131:8000"
+      GATEONE_HTTP_SERVER: "localhost:7681"
 
 networks:
   frontend: {}
