@@ -12,7 +12,6 @@
     <script src="js/bootstrap-select.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery.countdown.min.js" type="text/javascript"></script>
-    <script src="js/gateone.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -95,10 +94,7 @@
             </div>
         </div>
         <div class="col-lg-6" style="border-left:1px solid #000;height: 580px;">
-            <div id="gateone_container">
-                <div id="gateone">
-                </div>
-            </div>
+            <iframe src="/wsapp"></iframe>
         </div>
     </div>
     </div>
@@ -127,9 +123,6 @@
     window.onload = function () {
         // Initialize Gate One:
         // the gateone url is reverse proxied by the frontend nginx, this is a littbe bit triky
-        var gateone_url = parse('http://%s:80/wsapp', location.hostname);
-        console.log("gateone_url: %s", gateone_url)
-        GateOne.init({ url: gateone_url });
         $('.selectpicker').selectpicker();
 
     }

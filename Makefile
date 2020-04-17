@@ -10,13 +10,13 @@ build:
 #  the local dir will be mounted under /src read-only
 .PHONY: run
 run:
-	docker run -d --rm -p 80 -e GATEONE_HTTP_SERVER=localhost:7681 --name cka_ng_lab ssmiller25/cka_ng_lab:latest
+	docker run -d --rm -p 80:80 -e TTYD_HTTP_SERVER=localhost:7681 --name cka_ng_lab ssmiller25/cka_ng_lab:latest
 	docker run -d --rm --network=container:cka_ng_lab --name cka_ng_lab_ttyd ssmiller25/cka_ng_lab_ttyd:latest
 
-# Connect inside the running container for debugging
+# Connect inside the already running container for debugging
 .PHONY: shell
 shell:
-	docker exec -it ssmiller25/cka_ng_lab:latest bash
+	docker exec -it cka_ng_lab bash
 
 .PHONY: clean
 clean:
