@@ -10,8 +10,8 @@ build:
 #  the local dir will be mounted under /src read-only
 .PHONY: run
 run:
-	docker run -d --rm -p 80:80 -e TTYD_HTTP_SERVER=localhost:7681 --name cka_ng_lab ssmiller25/cka_ng_lab:latest
-	docker run -d --rm --network=container:cka_ng_lab --name cka_ng_lab_ttyd ssmiller25/cka_ng_lab_ttyd:latest
+	docker run -d --rm -p 80:80 --name cka_ng_lab ssmiller25/cka_ng_lab:latest
+	docker run -d --rm -p 7681:7681 --name cka_ng_lab_ttyd ssmiller25/cka_ng_lab_ttyd:latest
 
 # Connect inside the already running container for debugging
 .PHONY: shell

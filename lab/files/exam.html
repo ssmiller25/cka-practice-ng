@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="col-lg-6" style="border-left:1px solid #000;height: 580px;">
-            <iframe src="/wsapp"></iframe>
+            <iframe id="ttyd_frame" class="col-lg-6" height="580px" src="http://localhost:7681/"></iframe>
         </div>
     </div>
     </div>
@@ -121,6 +121,12 @@
     }
 
     window.onload = function () {
+        //Adjust Iframe to pull from same host, port 7681
+
+        var ifrm = document.getElementById('ttyd_frame')
+        var currentPage = new URL(window.location.href)
+        ifrm.src = currentPage.protocol + '//' + currentPage.hostname + ':7681/'
+
         $('.selectpicker').selectpicker();
 
     }
