@@ -1,6 +1,5 @@
 # CKA Practice Environment Next Gen!
 
-
 Based on the original repo [arush-sal/cka-practice-environment](https://github.com/arush-sal/cka-practice-environment) 
 and integrating modification from [satomic/cka-practice-environment](https://github.com/satomic/cka-practice-environment) 
 but with enough changes to warrant a name change (in my mind):
