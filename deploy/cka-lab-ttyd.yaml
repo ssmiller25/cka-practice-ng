@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: cka-lab-ttyd
+  name: cka-lab-ttyd
+  namespace: cka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: cka-lab-ttyd
+  template:
+    metadata:
+      labels:
+        run: cka-lab-ttyd
+    spec:
+      containers:
+      - image: ssmiller25/cka_ng_lab_ttyd
+        imagePullPolicy: Always
+        name: cka-lab-ttyd
+      dnsPolicy: ClusterFirst
