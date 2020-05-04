@@ -32,7 +32,7 @@ shell:
 	docker exec -it cka_ng_lab bash
 
 stop:
-  docker stop cka_ng_lab cka_ng_lab_ttyd
+	docker stop cka_ng_lab cka_ng_lab_ttyd
 
 .PHONY: clean
 clean:
