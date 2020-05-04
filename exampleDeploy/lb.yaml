@@ -1,0 +1,12 @@
+---
+kind: Service
+metadata:
+  name: cka-lab
+spec:
+  type: LoadBalancer
+---
+kind: Service
+metadata:
+  name: cka-lab-ttyd
+spec:
+  type: LoadBalancer
