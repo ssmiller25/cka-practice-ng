@@ -1,0 +1,5 @@
+namespace: cka
+bases:
+- github.com:ssmiller25/cka-practice-ng/deploy?ref=k8s-deploy
+resources:
+- ns.yaml
