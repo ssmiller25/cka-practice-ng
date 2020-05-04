@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: cka-lab
+  name: cka-lab
+  namespace: cka
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      run: cka-lab
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: cka-lab
+    spec:
+      containers:
+      - image: ssmiller25/cka_ng_lab
+        imagePullPolicy: Always
+        name: cka-lab
+        ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: cka-lab
+  name: cka-lab
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: cka-lab
+  sessionAffinity: None
+  type: ClusterIP

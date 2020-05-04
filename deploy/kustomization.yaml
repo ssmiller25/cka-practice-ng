@@ -1,0 +1,4 @@
+namespace: cka
+resources:
+- cka-lab-ttyd.yaml
+- cka-lab.yaml
